@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #1b1d1f;
+  background-image: url("./images/hero-image-wr.jpg");
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding-top: 50px;
+  width: 100%;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #6c727f;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.app {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin: 40px;
+}
+
+.rank-table {
+  background-color: #1b1d1f;
+  border-radius: 15px;
+  margin-top: 90px;
+  border: 1px solid;
+  border-color: #282b30;
+  padding: 20px 30px;
+}
+.rank-table-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+.search-bar {
+  width: 325px;
+  height: 45px;
+  background-image: url("./images/Search.svg");
+  background-repeat: no-repeat;
+  background-color: #282b30;
+  background-position: 10px center;
+  padding: 5px;
+  padding-left: 40px;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #6c727f;
+}
+
+.rank-table-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  width: 350px;
+  margin-right: 20px;
+}
+.rank-table-body {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 640px) {
+  .rank-table-body {
+    flex-direction: column;
+  }
+  .rank-table-side {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hide-column {
+    display: none;
+  }
+}
+
+.rank-table-main {
+  width: 100%;
+  margin: 0px 20px;
+}
+
+label {
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+}
+.sort-bar {
+  width: 100%;
+}
+select {
+  background-color: #1b1d1f;
+  border: 2px solid #282b30;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  color: #d2d5da;
+  margin: 5px 0px;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.region {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.region-buttons-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 15px 0px;
+  width: 100%;
+}
+.region-button {
+  background-color: #282b30;
+  border: none;
+  color: #6c727f;
+  height: 35px;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.region-button.active {
+  color: #d2d5da;
+}
+
+.status-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.status-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+  height: 40px;
+}
+
+.status-row label {
+  margin-left: 25px;
+  margin-top: 12px;
+  text-wrap: nowrap;
+}
+
+table {
+  width: 100%;
+  overflow: visible;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+thead,
+tbody {
+  position: static;
+  z-index: auto;
+}
+
+thead {
+  height: 70px;
+  border-bottom: 2px solid #282b30;
+}
+
+tbody {
+  margin: 10px;
+}
+th,
+td {
+  text-align: left;
+}
+
+tr {
+  height: 70px;
+  margin: 5px;
+}
+
+td {
+  color: #d2d5da;
+}
+.page {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.page-number {
+  background-color: #282b30;
+  color: #d2d5da;
+  border: 1px solid #6c727f;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.page-number.active {
+  background-color: #6c727f;
+}
+
+.flag-button {
+  width: 50px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.flag-button img {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/*     Checkbox     */
+/* ---------------- */
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border: 2px solid #6c727f;
+  border-radius: 3px;
+  background-color: #282b30;
+  padding: 1px;
+}
+input[type="checkbox"]:checked::before {
+  background-color: #4e80ee;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 15 px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 10px;
+}
+
+hr {
+  width: 100%;
+}
+
+/*   Country Page  */
+/* --------------- */
+
+.country-container {
+  background-color: #1b1d1f;
+  margin: 100px auto;
+  width: 750px;
+  align-items: center;
+  border: 1.5px solid #282b30;
+  border-radius: 15px;
+}
+
+img.country-flag {
+  border-radius: 15px;
+  width: 275px;
+  height: 200px;
+  position: relative;
+  margin-top: -50px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.country-name {
+  margin-top: 50px;
+}
+.country-population-area {
+  display: flex;
+  justify-content: center;
+  margin: 35px;
+}
+
+.country-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #282b30;
+  height: 50px;
+  width: 300px;
+  margin: 0px auto;
+  border-radius: 10px;
+}
+
+.country-highlight-element {
+  flex: 1;
+  display: flex;
+  height: 75%;
+  align-items: center;
+  justify-content: center;
+}
+.left-border {
+  border-left: #1b1d1f solid 1px;
+  height: 100%;
+  align-items: center;
+}
+
+.country-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 75px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: #282b30 solid 1.5px;
+  padding: 15px;
+}
+
+/* Neighbours  */
+/* ----------- */
+
+.flag-btn {
+  width: 90px;
+  height: 70px;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.flag-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.country-neighbour-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border-top: 1.5px solid #282b30;
+}
+.country-neighbours {
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+  padding-bottom: 100px;
+  flex-wrap: wrap;
+}
+.country-neighbour {
+  padding: 10px;
+}
+
+/*  Font  */
+/* ------ */
+
+.be-vietnam-pro-medium {
+  font-family: "Be Vietnam Pro", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+.small {
+  font-size: 12px;
+}
+.medium {
+  font-size: 14px;
+}
+.large {
+  font-size: 16px;
+}
+.extra-large {
+  font-size: 32px;
+}
+.bold {
+  font-weight: 500;
+}
+.light-color {
+  color: #d2d5da;
+}
