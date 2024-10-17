@@ -132,7 +132,7 @@ select {
   width: 100%;
 }
 .region-button {
-  background-color: #282b30;
+  background-color: #1b1d1f;
   border: none;
   color: #6c727f;
   height: 35px;
@@ -143,6 +143,7 @@ select {
 
 .region-button.active {
   color: #d2d5da;
+  background-color: #282b30;
 }
 
 .status-bar {
@@ -264,7 +265,7 @@ input[type="checkbox"]:checked::after {
   content: "";
   display: block;
   width: 5px;
-  height: 15 px;
+  height: 15px;
   border: solid #ffffff;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
