@@ -1,3 +1,6 @@
+The project is for sorting the countries of the world using different criteria. It is deployed in https://shinysherbina.github.io/world-ranks/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
